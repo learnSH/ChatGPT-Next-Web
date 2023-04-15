@@ -127,12 +127,12 @@ function showAbout() {
     title: Locale.AboutMe.Title,
     children: (
       <div style={{ fontSize: "18px", textAlign: "center" }}>
-        <a target="_blank" href="https://m.tb.cn/h.UG1XLc0?tk=waqkdlh70OS">
+        <a target="_blank" href="https://m.tb.cn/h.UH8uiex?tk=IiXedlhRuM4">
           低价至10元起！点击立即订购使用
         </a>
         <br></br>
         <br></br>
-        <a target="_blank" href="https://m.tb.cn/h.UtW6Nj3?tk=7CyDdlh7BU1">
+        <a target="_blank" href="https://m.tb.cn/h.UG1e6Jf?tk=Nc7xdlh8GUX">
           Plus可使用chatGPT4版本，99元起！点击立即订购使用
         </a>
         <br></br>
