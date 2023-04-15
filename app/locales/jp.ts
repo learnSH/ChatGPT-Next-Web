@@ -15,6 +15,7 @@ const jp = {
       ChatList: "メッセージリストを表示",
       CompressedHistory: "圧縮された履歴プロンプトを表示",
       Export: "チャット履歴をエクスポート",
+      AboutMe: "当駅について",
       Copy: "コピー",
       Stop: "停止",
       Retry: "リトライ",
@@ -36,6 +37,9 @@ const jp = {
     Download: "ファイルをダウンロード",
     MessageFromYou: "あなたからのメッセージ",
     MessageFromChatGPT: "ChatGPTからのメッセージ",
+  },
+  AboutMe: {
+    Title: "当駅について",
   },
   Memory: {
     Title: "履歴メモリ",

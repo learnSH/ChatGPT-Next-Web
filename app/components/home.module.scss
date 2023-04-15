@@ -408,6 +408,12 @@
 
       @include single-line();
     }
+    .hint-about {
+      font-size: 20px;
+      font-weight: bolder;
+
+      @include single-line();
+    }
     .hint-content {
       font-size: 12px;
 

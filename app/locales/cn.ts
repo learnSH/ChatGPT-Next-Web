@@ -14,6 +14,7 @@ const cn = {
       ChatList: "查看消息列表",
       CompressedHistory: "查看压缩后的历史 Prompt",
       Export: "导出聊天记录",
+      AboutMe: "关于本站",
       Copy: "复制",
       Stop: "停止",
       Retry: "重试",
@@ -35,6 +36,9 @@ const cn = {
     Download: "下载文件",
     MessageFromYou: "来自你的消息",
     MessageFromChatGPT: "来自 ChatGPT 的消息",
+  },
+  AboutMe: {
+    Title: "关于本站",
   },
   Memory: {
     Title: "历史记忆",

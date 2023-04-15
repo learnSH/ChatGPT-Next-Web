@@ -2,6 +2,7 @@ import { useDebounce, useDebouncedCallback } from "use-debounce";
 import { memo, useState, useRef, useEffect, useLayoutEffect } from "react";
 
 import SendWhiteIcon from "../icons/send-white.svg";
+import AboutMe from "../icons/about.svg";
 import BrainIcon from "../icons/brain.svg";
 import RenameIcon from "../icons/rename.svg";
 import ExportIcon from "../icons/share.svg";
@@ -119,6 +120,25 @@ function exportMessages(messages: Message[], topic: string) {
     ],
   });
 }
+
+// 打开页面展示关于本站
+function showAbout() {
+  showModal({
+    title: Locale.AboutMe.Title,
+    children: (
+        <div style={{fontSize: '18px', textAlign: 'center'}}>
+          <a target="_blank" href="https://www.houfaka.com/links/590032FF">低价至10元起！点击立即订购使用</a><br></br><br></br>
+          <strong>别再高价去买openai账号了！！！！！私人账号用着不再担心数据丢失</strong><br></br><br></br>
+          openAI 普通号低至<strong>10元</strong>！！！！！ <br></br> <br></br>
+          openAI Plus号，原价140元！现在只要<strong>99元</strong> ！！！！！<br></br><br></br>
+          本站是一个基于ChatGPT的聊天机器人<br></br>
+          立即openai账号，把账号的秘钥填入该配置进行使用。<br></br><br></br>
+          <strong style={{fontSize: '18px'}}>掌握知识，迎接成功。加入AI浪潮获取私人账号，成就你的梦想，开拓你的未来。现在订阅享受指导特权！</strong><br></br><br></br>
+        </div>
+    )
+  });
+}
+
 
 function PromptToast(props: {
   showToast?: boolean;
@@ -404,6 +424,9 @@ export function Chat(props: {
   showSideBar?: () => void;
   sideBarShowing?: boolean;
 }) {
+  useEffect(() => {
+    showAbout();
+  }, []);
   type RenderMessage = Message & { preview?: boolean };
 
   const chatStore = useChatStore();
