@@ -132,6 +132,11 @@ function showAbout() {
         </a>
         <br></br>
         <br></br>
+        <a target="_blank" href="https://m.tb.cn/h.UtW6Nj3?tk=7CyDdlh7BU1">
+          Plus可使用chatGPT4版本，99元起！点击立即订购使用
+        </a>
+        <br></br>
+        <br></br>
         <strong>
           别再高价去买openai账号了！！！！！私人账号用着不再担心数据丢失
         </strong>
