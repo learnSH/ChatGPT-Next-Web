@@ -16,6 +16,7 @@ const tr: LocaleType = {
       ChatList: "Sohbet Listesine Git",
       CompressedHistory: "Sıkıştırılmış Geçmiş Bellek Komutu",
       Export: "Tüm Mesajları Markdown Olarak Dışa Aktar",
+      AboutMe: "About Me",
       Copy: "Kopyala",
       Stop: "Durdur",
       Retry: "Tekrar Dene",
@@ -37,6 +38,9 @@ const tr: LocaleType = {
     Download: "İndir",
     MessageFromYou: "Sizin Mesajınız",
     MessageFromChatGPT: "ChatGPT'nin Mesajı",
+  },
+  AboutMe: {
+    Title: "关于本站",
   },
   Memory: {
     Title: "Bellek Komutları",

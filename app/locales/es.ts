@@ -16,6 +16,7 @@ const es: LocaleType = {
       ChatList: "Ir a la lista de chats",
       CompressedHistory: "Historial de memoria comprimido",
       Export: "Exportar todos los mensajes como Markdown",
+      AboutMe: "About Me",
       Copy: "Copiar",
       Stop: "Detener",
       Retry: "Reintentar",
@@ -37,6 +38,9 @@ const es: LocaleType = {
     Download: "Descargar",
     MessageFromYou: "Mensaje de ti",
     MessageFromChatGPT: "Mensaje de ChatGPT",
+  },
+  AboutMe: {
+    Title: "关于本站",
   },
   Memory: {
     Title: "Historial de memoria",
