@@ -147,7 +147,7 @@ function showAbout() {
         <br></br>
         <br></br>
         本站是一个基于ChatGPT的聊天机器人<br></br>
-        立即openai账号，把账号的秘钥填入该配置进行使用。<br></br>
+        购买openai账号，把账号的秘钥填入该配置进行使用。<br></br>
         <br></br>
         <strong style={{ fontSize: "18px" }}>
           掌握知识，迎接成功。加入AI浪潮获取私人账号，成就你的梦想，开拓你的未来。现在订阅享受指导特权！
