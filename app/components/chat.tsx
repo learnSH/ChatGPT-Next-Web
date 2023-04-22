@@ -127,7 +127,7 @@ function showAbout() {
     title: Locale.AboutMe.Title,
     children: (
       <div style={{ fontSize: "18px", textAlign: "center" }}>
-        <a target="_blank" href="https://m.tb.cn/h.UH8uiex?tk=IiXedlhRuM4">
+        <a target="_blank" href="https://m.tb.cn/h.UG69u9P?tk=8N2odOkXkpa">
           低价至10元起！点击立即订购使用
         </a>
         <br></br>
