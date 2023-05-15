@@ -16,6 +16,7 @@ const cs: LocaleType = {
       ChatList: "Přejít na seznam chatů",
       CompressedHistory: "Pokyn z komprimované paměti historie",
       Export: "Exportovat všechny zprávy jako Markdown",
+      AboutMe: "关于本站",
       Copy: "Kopírovat",
       Stop: "Zastavit",
       Retry: "Zopakovat",
@@ -35,6 +36,9 @@ const cs: LocaleType = {
       Reset: "Obnovit výchozí",
       SaveAs: "Uložit jako Masku",
     },
+  },
+  AboutMe: {
+    Title: "关于本站",
   },
   Export: {
     Title: "Všechny zprávy",

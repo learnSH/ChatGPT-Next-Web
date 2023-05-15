@@ -16,6 +16,7 @@ const de: LocaleType = {
       ChatList: "Zur Chat-Liste gehen",
       CompressedHistory: "Komprimierter Gedächtnis-Prompt",
       Export: "Alle Nachrichten als Markdown exportieren",
+      AboutMe: "关于本站",
       Copy: "Kopieren",
       Stop: "Stop",
       Retry: "Wiederholen",
@@ -35,6 +36,9 @@ const de: LocaleType = {
       Reset: "Reset to Default",
       SaveAs: "Save as Mask",
     },
+  },
+  AboutMe: {
+    Title: "关于本站",
   },
   Export: {
     Title: "Alle Nachrichten",
