@@ -16,6 +16,7 @@ const vi: LocaleType = {
       ChatList: "Xem danh sách chat",
       CompressedHistory: "Nén tin nhắn trong quá khứ",
       Export: "Xuất tất cả tin nhắn dưới dạng Markdown",
+      AboutMe: "关于本站",
       Copy: "Sao chép",
       Stop: "Dừng",
       Retry: "Thử lại",
@@ -35,6 +36,9 @@ const vi: LocaleType = {
       Reset: "Khôi phục cài đặt gốc",
       SaveAs: "Lưu dưới dạng Mẫu",
     },
+  },
+  AboutMe: {
+    Title: "关于本站",
   },
   Export: {
     Title: "Tất cả tin nhắn",

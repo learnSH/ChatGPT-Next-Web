@@ -16,6 +16,7 @@ const ru: LocaleType = {
       ChatList: "Перейти к списку чатов",
       CompressedHistory: "Сжатая история памяти",
       Export: "Экспортировать все сообщения в формате Markdown",
+      AboutMe: "关于本站",
       Copy: "Копировать",
       Stop: "Остановить",
       Retry: "Повторить",
@@ -35,6 +36,9 @@ const ru: LocaleType = {
       Reset: "Сбросить настройки",
       SaveAs: "Сохранить как маску",
     },
+  },
+  AboutMe: {
+    Title: "关于本站",
   },
   Export: {
     Title: "Все сообщения",
