@@ -1,4 +1,4 @@
-import { SubmitKey } from "../store/app";
+import { SubmitKey } from "../store/config";
 import type { LocaleType } from "./index";
 
 const tr: LocaleType = {
@@ -20,6 +20,7 @@ const tr: LocaleType = {
       Copy: "Kopyala",
       Stop: "Durdur",
       Retry: "Tekrar Dene",
+      Delete: "Delete",
     },
     Rename: "Sohbeti Yeniden Adlandır",
     Typing: "Yazıyor…",
@@ -31,6 +32,10 @@ const tr: LocaleType = {
       return inputHints + ", komutları aramak için / (eğik çizgi)";
     },
     Send: "Gönder",
+    Config: {
+      Reset: "Reset to Default",
+      SaveAs: "Save as Mask",
+    },
   },
   Export: {
     Title: "Tüm Mesajlar",
@@ -64,15 +69,12 @@ const tr: LocaleType = {
       ClearAll: "Tüm Verileri Temizle",
       ResetAll: "Tüm Ayarları Sıfırla",
       Close: "Kapat",
-      ConfirmResetAll: {
-        Confirm: "Tüm ayarları sıfırlamak istediğinizden emin misiniz?",
-      },
-      ConfirmClearAll: {
-        Confirm: "Tüm sohbeti sıfırlamak istediğinizden emin misiniz?",
-      },
+      ConfirmResetAll: "Tüm ayarları sıfırlamak istediğinizden emin misiniz?",
+      ConfirmClearAll: "Tüm sohbeti sıfırlamak istediğinizden emin misiniz?",
     },
     Lang: {
       Name: "Language", // ATTENTION: if you wanna add a new translation, please do not translate this value, leave it as `Language`
+      All: "Tüm Diller",
       Options: {
         cn: "简体中文",
         en: "English",
@@ -81,6 +83,10 @@ const tr: LocaleType = {
         it: "Italiano",
         tr: "Türkçe",
         jp: "日本語",
+        de: "Deutsch",
+        vi: "Tiếng Việt",
+        ru: "Русский",
+        cs: "Čeština",
       },
     },
     Avatar: "Avatar",
@@ -99,7 +105,14 @@ const tr: LocaleType = {
     SendKey: "Gönder Tuşu",
     Theme: "Tema",
     TightBorder: "Tam Ekran",
-    SendPreviewBubble: "Mesaj Önizleme Balonu",
+    SendPreviewBubble: {
+      Title: "Mesaj Önizleme Balonu",
+      SubTitle: "Preview markdown in bubble",
+    },
+    Mask: {
+      Title: "Mask Splash Screen",
+      SubTitle: "Show a mask splash screen before starting new chat",
+    },
     Prompt: {
       Disable: {
         Title: "Otomatik tamamlamayı devre dışı bırak",
@@ -109,6 +122,14 @@ const tr: LocaleType = {
       ListCount: (builtin: number, custom: number) =>
         `${builtin} yerleşik, ${custom} kullanıcı tanımlı`,
       Edit: "Düzenle",
+      Modal: {
+        Title: "Prompt List",
+        Add: "Add One",
+        Search: "Search Prompts",
+      },
+      EditModal: {
+        Title: "Edit Prompt",
+      },
     },
     HistoryCount: {
       Title: "Ekli Mesaj Sayısı",
@@ -168,8 +189,6 @@ const tr: LocaleType = {
       Summarize:
         "Gelecekteki bağlam için bir bilgi istemi olarak kullanmak üzere tartışmamızı en fazla 200 kelimeyle özetleyin.",
     },
-    ConfirmClearAll:
-      "Tüm sohbet ve ayar verilerini temizlemeyi onaylıyor musunuz?",
   },
   Copy: {
     Success: "Panoya kopyalandı",
@@ -179,6 +198,53 @@ const tr: LocaleType = {
     Toast: (x: any) => `${x} bağlamsal bellek komutu`,
     Edit: "Bağlamsal ve Bellek Komutları",
     Add: "Yeni Ekle",
+  },
+  Plugin: {
+    Name: "Plugin",
+  },
+  Mask: {
+    Name: "Mask",
+    Page: {
+      Title: "Prompt Template",
+      SubTitle: (count: number) => `${count} prompt templates`,
+      Search: "Search Templates",
+      Create: "Create",
+    },
+    Item: {
+      Info: (count: number) => `${count} prompts`,
+      Chat: "Chat",
+      View: "View",
+      Edit: "Edit",
+      Delete: "Delete",
+      DeleteConfirm: "Confirm to delete?",
+    },
+    EditModal: {
+      Title: (readonly: boolean) =>
+        `Edit Prompt Template ${readonly ? "(readonly)" : ""}`,
+      Download: "Download",
+      Clone: "Clone",
+    },
+    Config: {
+      Avatar: "Bot Avatar",
+      Name: "Bot Name",
+    },
+  },
+  NewChat: {
+    Return: "Return",
+    Skip: "Skip",
+    Title: "Pick a Mask",
+    SubTitle: "Chat with the Soul behind the Mask",
+    More: "Find More",
+    NotShow: "Not Show Again",
+    ConfirmNoShow: "Confirm to disable？You can enable it in settings later.",
+  },
+
+  UI: {
+    Confirm: "Confirm",
+    Cancel: "Cancel",
+    Close: "Close",
+    Create: "Create",
+    Edit: "Edit",
   },
 };
 

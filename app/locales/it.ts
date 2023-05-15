@@ -1,4 +1,4 @@
-import { SubmitKey } from "../store/app";
+import { SubmitKey } from "../store/config";
 import type { LocaleType } from "./index";
 
 const it: LocaleType = {
@@ -20,6 +20,7 @@ const it: LocaleType = {
       Copy: "Copia",
       Stop: "Stop",
       Retry: "Riprova",
+      Delete: "Delete",
     },
     Rename: "Rinomina Chat",
     Typing: "Typing…",
@@ -31,6 +32,10 @@ const it: LocaleType = {
       return inputHints;
     },
     Send: "Invia",
+    Config: {
+      Reset: "Reset to Default",
+      SaveAs: "Save as Mask",
+    },
   },
   Export: {
     Title: "Tutti i messaggi",
@@ -49,12 +54,12 @@ const it: LocaleType = {
     Send: "Send Memory",
     Reset: "Reset Session",
     ResetConfirm:
-      "Resetting will clear the current conversation history and historical memory. Are you sure you want to reset?",
+      "Ripristinare cancellerà la conversazione corrente e la cronologia di memoria. Sei sicuro che vuoi riavviare?",
   },
   Home: {
     NewChat: "Nuova Chat",
     DeleteChat: "Confermare la cancellazione della conversazione selezionata?",
-    DeleteToast: "Chat Deleted",
+    DeleteToast: "Chat Cancellata",
     Revert: "Revert",
   },
   Settings: {
@@ -64,15 +69,12 @@ const it: LocaleType = {
       ClearAll: "Cancella tutti i dati",
       ResetAll: "Resetta tutte le impostazioni",
       Close: "Chiudi",
-      ConfirmResetAll: {
-        Confirm: "Sei sicuro vuoi cancellare tutte le impostazioni?",
-      },
-      ConfirmClearAll: {
-        Confirm: "Sei sicuro vuoi cancellare tutte le chat?",
-      },
+      ConfirmResetAll: "Sei sicuro vuoi cancellare tutte le impostazioni?",
+      ConfirmClearAll: "Sei sicuro vuoi cancellare tutte le chat?",
     },
     Lang: {
-      Name: "Lingue",
+      Name: "Language", // ATTENTION: if you wanna add a new translation, please do not translate this value, leave it as `Language`
+      All: "Tutte le lingue",
       Options: {
         cn: "简体中文",
         en: "English",
@@ -81,6 +83,10 @@ const it: LocaleType = {
         it: "Italiano",
         tr: "Türkçe",
         jp: "日本語",
+        de: "Deutsch",
+        vi: "Tiếng Việt",
+        ru: "Русский",
+        cs: "Čeština",
       },
     },
     Avatar: "Avatar",
@@ -97,9 +103,16 @@ const it: LocaleType = {
       GoToUpdate: "Aggiorna",
     },
     SendKey: "Tasto invia",
-    Theme: "tema",
-    TightBorder: "Bordi stretti",
-    SendPreviewBubble: "Invia l'anteprima della bolla",
+    Theme: "Tema",
+    TightBorder: "Schermo intero",
+    SendPreviewBubble: {
+      Title: "Anteprima di digitazione",
+      SubTitle: "Preview markdown in bubble",
+    },
+    Mask: {
+      Title: "Mask Splash Screen",
+      SubTitle: "Show a mask splash screen before starting new chat",
+    },
     Prompt: {
       Disable: {
         Title: "Disabilita l'auto completamento",
@@ -109,6 +122,14 @@ const it: LocaleType = {
       ListCount: (builtin: number, custom: number) =>
         `${builtin} built-in, ${custom} user-defined`,
       Edit: "Modifica",
+      Modal: {
+        Title: "Prompt List",
+        Add: "Add One",
+        Search: "Search Prompts",
+      },
+      EditModal: {
+        Title: "Edit Prompt",
+      },
     },
     HistoryCount: {
       Title: "Conteggio dei messaggi allegati",
@@ -120,7 +141,7 @@ const it: LocaleType = {
         "Comprimerà se la lunghezza dei messaggi non compressi supera il valore",
     },
     Token: {
-      Title: "Chiave API",
+      Title: "API Key",
       SubTitle:
         "Utilizzare la chiave per ignorare il limite del codice di accesso",
       Placeholder: "OpenAI API Key",
@@ -128,7 +149,7 @@ const it: LocaleType = {
     Usage: {
       Title: "Bilancio Account",
       SubTitle(used: any, total: any) {
-        return `Usato in questo mese $${used}, subscription $${total}`;
+        return `Attualmente usato in questo mese $${used}, soglia massima $${total}`;
       },
       IsChecking: "Controllando...",
       Check: "Controlla ancora",
@@ -167,8 +188,6 @@ const it: LocaleType = {
       Summarize:
         "Riassumi brevemente la nostra discussione in 200 caratteri o meno per usarla come spunto per una futura conversazione.",
     },
-    ConfirmClearAll:
-      "Confermi la cancellazione di tutti i dati della chat e delle impostazioni?",
   },
   Copy: {
     Success: "Copiato sugli appunti",
@@ -179,6 +198,53 @@ const it: LocaleType = {
     Toast: (x: any) => `Con ${x} prompts contestuali`,
     Edit: "Prompt contestuali e di memoria",
     Add: "Aggiungi altro",
+  },
+  Plugin: {
+    Name: "Plugin",
+  },
+  Mask: {
+    Name: "Mask",
+    Page: {
+      Title: "Prompt Template",
+      SubTitle: (count: number) => `${count} prompt templates`,
+      Search: "Search Templates",
+      Create: "Create",
+    },
+    Item: {
+      Info: (count: number) => `${count} prompts`,
+      Chat: "Chat",
+      View: "View",
+      Edit: "Edit",
+      Delete: "Delete",
+      DeleteConfirm: "Confirm to delete?",
+    },
+    EditModal: {
+      Title: (readonly: boolean) =>
+        `Edit Prompt Template ${readonly ? "(readonly)" : ""}`,
+      Download: "Download",
+      Clone: "Clone",
+    },
+    Config: {
+      Avatar: "Bot Avatar",
+      Name: "Bot Name",
+    },
+  },
+  NewChat: {
+    Return: "Return",
+    Skip: "Skip",
+    Title: "Pick a Mask",
+    SubTitle: "Chat with the Soul behind the Mask",
+    More: "Find More",
+    NotShow: "Not Show Again",
+    ConfirmNoShow: "Confirm to disable？You can enable it in settings later.",
+  },
+
+  UI: {
+    Confirm: "Confirm",
+    Cancel: "Cancel",
+    Close: "Close",
+    Create: "Create",
+    Edit: "Edit",
   },
 };
 
