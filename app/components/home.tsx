@@ -6,10 +6,6 @@ import { useState, useEffect } from "react";
 
 import styles from "./home.module.scss";
 
-import SettingsIcon from "../icons/settings.svg";
-import Shopping from "../icons/shopping.svg";
-import ChatGptIcon from "../icons/chatgpt.svg";
-
 import BotIcon from "../icons/bot.svg";
 import LoadingIcon from "../icons/three-dots.svg";
 

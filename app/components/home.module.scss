@@ -140,6 +140,9 @@
 }
 
 .sidebar-sub-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-size: 12px;
   font-weight: 400px;
   animation: slide-in ease 0.3s;
@@ -499,12 +502,6 @@
 
     .hint-title {
       font-size: 12px;
-      font-weight: bolder;
-
-      @include single-line();
-    }
-    .hint-about {
-      font-size: 20px;
       font-weight: bolder;
 
       @include single-line();
