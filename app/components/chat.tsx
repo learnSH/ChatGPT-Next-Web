@@ -2,7 +2,6 @@ import { useDebouncedCallback } from "use-debounce";
 import { useState, useRef, useEffect, useLayoutEffect } from "react";
 
 import SendWhiteIcon from "../icons/send-white.svg";
-
 import BrainIcon from "../icons/brain.svg";
 import RenameIcon from "../icons/rename.svg";
 import ExportIcon from "../icons/share.svg";
@@ -55,7 +54,7 @@ import chatStyle from "./chat.module.scss";
 
 import { ListItem, Modal, showModal } from "./ui-lib";
 import { useLocation, useNavigate } from "react-router-dom";
-import {LAST_INPUT_KEY, Path, REPO_URL} from "../constant";
+import { LAST_INPUT_KEY, Path, REPO_URL } from "../constant";
 import { Avatar } from "./emoji";
 import { MaskAvatar, MaskConfig } from "./mask";
 import { useMaskStore } from "../store/mask";
@@ -504,7 +503,7 @@ export function Chat() {
       e.preventDefault();
       return;
     }
-    if (shouldSubmit(e)) {
+    if (shouldSubmit(e) && promptHints.length === 0) {
       doSubmit(userInput);
       e.preventDefault();
     }
@@ -646,11 +645,7 @@ export function Chat() {
           </div>
           <div className="window-action-button">
             <a href={REPO_URL} target="_blank">
-              <IconButton
-                  icon={<Shopping />}
-                  bordered
-                  text={"购买账号"}
-              />
+              <IconButton icon={<Shopping />} bordered text={"购买账号"} />
             </a>
           </div>
           <div className="window-action-button">

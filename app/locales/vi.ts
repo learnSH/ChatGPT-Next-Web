@@ -79,6 +79,7 @@ const vi: LocaleType = {
         cn: "简体中文",
         en: "English",
         tw: "繁體中文",
+        fr: "Français",
         es: "Español",
         it: "Italiano",
         tr: "Türkçe",
@@ -167,7 +168,7 @@ const vi: LocaleType = {
       Title: "Giới hạn số lượng token (max_tokens)",
       SubTitle: "Số lượng token tối đa được sử dụng trong mỗi lần tương tác",
     },
-    PresencePenlty: {
+    PresencePenalty: {
       Title: "Chủ đề mới (presence_penalty)",
       SubTitle: "Giá trị càng lớn tăng khả năng mở rộng sang các chủ đề mới",
     },

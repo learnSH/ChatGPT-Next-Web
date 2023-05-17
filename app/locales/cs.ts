@@ -79,6 +79,7 @@ const cs: LocaleType = {
         cn: "简体中文",
         en: "English",
         tw: "繁體中文",
+        fr: "Français",
         es: "Español",
         it: "Italiano",
         tr: "Türkçe",
@@ -168,7 +169,7 @@ const cs: LocaleType = {
       Title: "Max. počet tokenů",
       SubTitle: "Maximální délka vstupního tokenu a generovaných tokenů",
     },
-    PresencePenlty: {
+    PresencePenalty: {
       Title: "Přítomnostní korekce",
       SubTitle: "Větší hodnota zvyšuje pravděpodobnost nových témat.",
     },
