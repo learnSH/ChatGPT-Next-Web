@@ -31,7 +31,12 @@ import {
   useAppConfig,
 } from "../store";
 
-import Locale, { AllLangs, changeLang, getLang } from "../locales";
+import Locale, {
+  AllLangs,
+  ALL_LANG_OPTIONS,
+  changeLang,
+  getLang,
+} from "../locales";
 import { copyToClipboard } from "../utils";
 import Link from "next/link";
 import { Path, UPDATE_URL } from "../constant";
@@ -327,67 +332,65 @@ export function Settings() {
         </div>
       </div>
       <div className={styles["settings"]}>
-
         <List>
           {enabledAccessControl ? (
-              <ListItem
-                  title={Locale.Settings.AccessCode.Title}
-                  subTitle={Locale.Settings.AccessCode.SubTitle}
-              >
-                <PasswordInput
-                    value={accessStore.accessCode}
-                    type="text"
-                    placeholder={Locale.Settings.AccessCode.Placeholder}
-                    onChange={(e) => {
-                      accessStore.updateCode(e.currentTarget.value);
-                    }}
-                />
-              </ListItem>
+            <ListItem
+              title={Locale.Settings.AccessCode.Title}
+              subTitle={Locale.Settings.AccessCode.SubTitle}
+            >
+              <PasswordInput
+                value={accessStore.accessCode}
+                type="text"
+                placeholder={Locale.Settings.AccessCode.Placeholder}
+                onChange={(e) => {
+                  accessStore.updateCode(e.currentTarget.value);
+                }}
+              />
+            </ListItem>
           ) : (
-              <></>
+            <></>
           )}
 
           {!accessStore.hideUserApiKey ? (
-              <ListItem
-                  title={Locale.Settings.Token.Title}
-                  subTitle={Locale.Settings.Token.SubTitle}
-              >
-                <PasswordInput
-                    value={accessStore.token}
-                    type="text"
-                    placeholder={Locale.Settings.Token.Placeholder}
-                    onChange={(e) => {
-                      accessStore.updateToken(e.currentTarget.value);
-                    }}
-                />
-              </ListItem>
+            <ListItem
+              title={Locale.Settings.Token.Title}
+              subTitle={Locale.Settings.Token.SubTitle}
+            >
+              <PasswordInput
+                value={accessStore.token}
+                type="text"
+                placeholder={Locale.Settings.Token.Placeholder}
+                onChange={(e) => {
+                  accessStore.updateToken(e.currentTarget.value);
+                }}
+              />
+            </ListItem>
           ) : null}
 
           <ListItem
-              title={Locale.Settings.Usage.Title}
-              subTitle={
-                showUsage
-                    ? loadingUsage
-                        ? Locale.Settings.Usage.IsChecking
-                        : Locale.Settings.Usage.SubTitle(
-                            usage?.used ?? "[?]",
-                            usage?.subscription ?? "[?]",
-                        )
-                    : Locale.Settings.Usage.NoAccess
-              }
+            title={Locale.Settings.Usage.Title}
+            subTitle={
+              showUsage
+                ? loadingUsage
+                  ? Locale.Settings.Usage.IsChecking
+                  : Locale.Settings.Usage.SubTitle(
+                      usage?.used ?? "[?]",
+                      usage?.subscription ?? "[?]",
+                    )
+                : Locale.Settings.Usage.NoAccess
+            }
           >
             {!showUsage || loadingUsage ? (
-                <div />
+              <div />
             ) : (
-                <IconButton
-                    icon={<ResetIcon></ResetIcon>}
-                    text={Locale.Settings.Usage.Check}
-                    onClick={() => checkUsage(true)}
-                />
+              <IconButton
+                icon={<ResetIcon></ResetIcon>}
+                text={Locale.Settings.Usage.Check}
+                onClick={() => checkUsage(true)}
+              />
             )}
           </ListItem>
         </List>
-
 
         <List>
           <ListItem title={Locale.Settings.Avatar}>
@@ -456,7 +459,7 @@ export function Settings() {
             >
               {AllLangs.map((lang) => (
                 <option value={lang} key={lang}>
-                  {Locale.Settings.Lang.Options[lang]}
+                  {ALL_LANG_OPTIONS[lang]}
                 </option>
               ))}
             </Select>
@@ -514,7 +517,6 @@ export function Settings() {
             ></input>
           </ListItem>
         </List>
-
 
         <List>
           <ListItem
