@@ -26,7 +26,7 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 import { useMobileScreen } from "../utils";
 import dynamic from "next/dynamic";
-import {showModal, showToast} from "./ui-lib";
+import { showModal, showToast } from "./ui-lib";
 
 const ChatList = dynamic(async () => (await import("./chat-list")).ChatList, {
   loading: () => null,
@@ -120,9 +120,7 @@ export function SideBar(props: { className?: string }) {
     >
       <div className={styles["sidebar-header"]}>
         <div className={styles["sidebar-title"]}>ChatGPT</div>
-        <div className={styles["sidebar-sub-title"]}>
-          专属私人AI
-        </div>
+        <div className={styles["sidebar-sub-title"]}>专属私人AI</div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <ChatGptIcon />
         </div>
@@ -174,7 +172,12 @@ export function SideBar(props: { className?: string }) {
             </Link>
           </div>
           <div className={styles["sidebar-action"]}>
-              <IconButton icon={<AboutMe />} onClick={showAbout} text="说明" shadow />
+            <IconButton
+              icon={<AboutMe />}
+              onClick={showAbout}
+              text="说明"
+              shadow
+            />
           </div>
         </div>
         <div>
@@ -206,35 +209,31 @@ function showAbout() {
   showModal({
     title: Locale.AboutMe.Title,
     children: (
-        <div style={{ fontSize: "18px", textAlign: "center" }}>
-          <a target="_blank" href="https://m.tb.cn/h.UvgWU36?tk=ThOxdNkyT5k">
-            低价至10元起！点击立即订购使用
-          </a>
-          <br></br>
-          <br></br>
-          <a target="_blank" href="https://m.tb.cn/h.UG1e6Jf?tk=Nc7xdlh8GUX">
-            Plus可使用chatGPT4版本，99元起！点击立即订购使用
-          </a>
-          <br></br>
-          <br></br>
-          <strong>
-            别再高价去买openai账号了！！！！！私人账号用着不再担心数据丢失
-          </strong>
-          <br></br>
-          <br></br>
-          openAI 普通号低至<strong>10元</strong>！！！！！ <br></br> <br></br>
-          openAI Plus号，原价140元！现在只要<strong>99元</strong> ！！！！！
-          <br></br>
-          <br></br>
-          本站是一个基于ChatGPT的聊天机器人<br></br>
-          购买openai账号，把账号的秘钥填入该配置进行使用。<br></br>
-          <br></br>
-          <strong style={{ fontSize: "18px" }}>
-            掌握知识，迎接成功。加入AI浪潮获取私人账号，成就你的梦想，开拓你的未来。现在订阅享受指导特权！
-          </strong>
-          <br></br>
-          <br></br>
-        </div>
+      <div style={{ fontSize: "18px", textAlign: "center" }}>
+        <a target="_blank" href="https://m.tb.cn/h.5Q5OdL4?tk=eLtBW3VUHfX">
+          低价至10元起！点击立即订购使用
+        </a>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <strong>
+          别再高价去买openai账号了！！！！！私人账号用着不再担心数据丢失
+        </strong>
+        <br></br>
+        <br></br>
+        openAI 普通号低至<strong>10元</strong>！！！！！ <br></br> <br></br>
+        <br></br>
+        <br></br>
+        本站是一个基于ChatGPT的聊天机器人<br></br>
+        购买openai账号，把账号的秘钥填入该配置进行使用。<br></br>
+        <br></br>
+        <strong style={{ fontSize: "18px" }}>
+          掌握知识，迎接成功。加入AI浪潮获取私人账号，成就你的梦想，开拓你的未来。现在订阅享受指导特权！
+        </strong>
+        <br></br>
+        <br></br>
+      </div>
     ),
   });
 }
