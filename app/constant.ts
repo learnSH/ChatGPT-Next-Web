@@ -1,6 +1,6 @@
 export const OWNER = "learnSH";
 export const REPO = "ChatGPT-Next-Web";
-export const REPO_URL = `https://m.tb.cn/h.UvgWU36?tk=ThOxdNkyT5k`;
+export const REPO_URL = `https://m.tb.cn/h.5Q5OdL4?tk=eLtBW3VUHfX`;
 export const ISSUE_URL = `https://github.com/${OWNER}/${REPO}/issues`;
 export const UPDATE_URL = `${REPO_URL}#keep-updated`;
 export const FETCH_COMMIT_URL = `https://api.github.com/repos/${OWNER}/${REPO}/commits?per_page=1`;
